@@ -1,0 +1,13 @@
+
+<nav class="navbar navbar-default">
+  <img src="{{url_for('static', filename='img/img.jpg')}}" alt="imagen">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Flask App</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="{{ url_for('index') }}">Botón Inicio</a></li>
+      <li><a href="https://www.google.com">Botón Google</a></li>
+    </ul>
+  </div>
+</nav>

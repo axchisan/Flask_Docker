@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{%import 'macros.html' as macros%}
+{%block title%}
+    {{super()}}
+    Welocome to FLask project
+{%endblock%}
+
+{%block content%}
+    {%if user_ip %}
+        <h2> Hola que tal, tu direccion ip es {{user_ip}} </h2>
+    {%else %}
+        <a href={{ url_for('index')}}> Crear cookie</a>
+    {% endif %}
+
+    <ul>
+    {%for item in items%}
+        {{macros.render_items(item)}}
+    {% endfor %}
+    <ul>    
+{%endblock%}
